@@ -59,7 +59,7 @@ L = tl_p1411_aboveroof(f, d, type, var)
  
 ## §4.3.1: Site-general model for terminals of low hight from below roof-top to near street level (1.9 m < h < 3 m).
 ~~~ 
-L = tl_p1411_lowheight(f, d, env, p)
+L = tl_p1411_lowheight(f, d, type, p)
 ~~~
 
 ## Required input arguments of function `tl_p1411_lowheight`
@@ -67,7 +67,7 @@ L = tl_p1411_lowheight(f, d, env, p)
 | Variable          | Type   | Units | Limits       | Description  |
 |-------------------|--------|-------|--------------|--------------|
 | `f`               | double | MHz   | 300 ≤ `f` ≤ 3000 | Frequency | 
-| `d`               | double | m   | 0 < `d` ≤ 1   | 3D direct distance between Tx and Rx stations  |
+| `d`               | double | m   | 0 < `d` ≤ 3000   | 3D direct distance between Tx and Rx stations  |
 | `type`      | int |    | 1 - Suburban, 2 - Urban, 3 - Dense urban/high-rise | Envirnonment type |
 | `p`      | double | %    | 0 < `p` < 100  | Location percentage |
 
