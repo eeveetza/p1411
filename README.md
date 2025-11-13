@@ -1,6 +1,6 @@
 # MATLAB/Octave Implementation of Recommendation ITU-R P.1411 (Site-General Prediction Methods)
 
-This code repository contains a MATLAB/Octave software implementation of site-general prediction methods in [Recommendation ITU-R P.1411-11](https://www.itu.int/rec/R-REC-P.1411/en) §4.1.1, §4.2.1 and §4.3.1 with propagation data and prediction methods for the planning of short-range outdoor radiocommunication systems and radio local area networks in the frequency range 300 MHz to 100 GHz.  
+This code repository contains a MATLAB/Octave software implementation of site-general prediction methods in [Recommendation ITU-R P.1411-13](https://www.itu.int/rec/R-REC-P.1411/en) §4.1.1, §4.2.1 and §4.3.1 with propagation data and prediction methods for the planning of short-range outdoor radiocommunication systems and radio local area networks in the frequency range 300 MHz to 300 GHz.  
 
 
 The following table describes the structure of the folder `./matlab/` containing the MATLAB/Octave implementation of Recommendation ITU-R P.1411.
@@ -28,13 +28,20 @@ L = tl_p1411_belowroof(f, d, type, var)
 
 ### Note 
  <b>URBAN:  </b> LoS, Urban (high-rise, low-rise)/Suburban
- <br>     `f` = 0.8 - 82 GHz, `d` = 5 - 660 m <br> 
- <b>HIGH_RISE_URBAN: </b> NLoS, Urban high-rise
- <br>     `f` = 0.8 - 82 GHz, `d` = 30 - 715 m
+<br>                     0.45 <= `f` <= 82, 5 <= `d` <= 660
+<br>                     82 < `f` <= 159,  5 <= `d` <= 500
+<br>                     159 < `f` <= 255, 5 <= `d` <= 250
+<br>                     255 < `f` <= 300, 5 <= `d` <= 155 
+ <br><b>HIGH_RISE_URBAN: </b> NLoS, Urban high-rise
+<br>                     0.8 <= `f` <= 82, 20 <= `d` < 715
+<br>                     82 < `f` <= 159,  20 <= `d` <= 150
  <br> <b>SUBURBAN: </b> NLoS,  Urban low-rise/Suburban
- <br>    `f` = 10 - 73 GHz, `d` = 30 - 250 m
+ <br>                  0.45 <= `f` <= 73, 10 <= `d` <= 250
+<br>                    73 < `f` <= 159,  10 <= `d` <= 150
+<br>                     159 < `f` <= 255, 10 <= `d` <= 80
  <br> <b>RESIDENTIAL: </b>NLoS,  Residential
  <br>    `f` = 0.8 - 73 GHz, `d` = 30 - 170 m
+
 
 
 ## §4.2.1: Site-general model where one of the stations is located below-rooftop, and the other above-rooftop  regardless of their antenna heights
