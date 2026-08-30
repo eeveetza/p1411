@@ -14,7 +14,7 @@ function L = tl_p1411_aboveroof(f, d, type, variations)
 %                 1 - Urban high-rise, Urban low-rise/Suburban, LoS
 %                     2.2 <= f <= 73, 55 < d < 1200
 %                 2 - Urban high-rise, NLoS
-%                     2.2 <= f <= 66.5, 360 < d < 1200
+%                     2.2 <= f <= 66.5, 260 < d < 1200
 %     variations -  computed if set to true
 
 %
